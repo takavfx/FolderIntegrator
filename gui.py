@@ -39,6 +39,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setSignals()
 
 
+    def closeEvent(self, event):
+        self.setParent(None)
+
+
     def initGUI(self):
         self.resize(self._windowWidth, self._windowHeight)
 
@@ -46,6 +50,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.UI.filesListWidget.setAlternatingRowColors(True)
         self.UI.filesListWidget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+
 
     def setSignals(self):
         self.UI.openRepoAction.triggered.connect(self.openGitHubRepo)
@@ -106,8 +111,10 @@ class MainWindow(QtWidgets.QMainWindow):
             files.append(self.UI.filesListWidget.item(x).text())
         Core.integrate(files)
 
+
     def openGitHubRepo(self):
         webbrowser.open(r'https://github.com/takavfx/FolderIntegrator')
+
 
 
 def main():
