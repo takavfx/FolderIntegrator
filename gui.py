@@ -55,7 +55,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def setSignals(self):
         self.UI.openRepoAction.triggered.connect(self.openGitHubRepo)
         self.UI.runButton.clicked.connect(self.run)
-        self.UI.filesListWidget.customContextMenuRequested.connect(self.showCellMenu)
+        self.UI.filesListWidget.customContextMenuRequested.connect(self.showContextMenu)
 
 
     ## Drop Event
@@ -80,7 +80,7 @@ class MainWindow(QtWidgets.QMainWindow):
             event.ignore()
 
 
-    def showCellMenu(self, pos):
+    def showContextMenu(self, pos):
 
         contextMenu = QtWidgets.QMenu()
         currentItem = self.UI.filesListWidget.itemAt(pos.x(), pos.y())
