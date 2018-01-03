@@ -3,6 +3,11 @@ Tool to integrate multi folders.
 
 ![](doc/images/gui.png)
 
+# How to use
+
+1. Drag & Drop folders to the window.
+2. Push "Run" button.
+
 # Usage
 
 With terminal command, adding folders as arguments creates single folder and integrate all files from folders into the single folder.
@@ -26,7 +31,7 @@ root_folder
 ### After:
 ```
 root_folder
-    |- single_folder
+    |- 'untitiled'
     |   |- a-a
     |   |- a-b
     |   |- b-a
