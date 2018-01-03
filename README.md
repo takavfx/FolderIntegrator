@@ -3,6 +3,12 @@ Tool to integrate multi folders.
 
 ![](doc/images/gui.png)
 
+# Launch
+
+1. Prepare environment for PySide
+2. Go to the repository
+3. Run commmand `python gui.py`
+
 # How to use
 
 1. Drag & Drop folders to the window.
