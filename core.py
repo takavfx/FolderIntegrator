@@ -3,7 +3,7 @@ import sys
 import shutil
 import uuid
 
-def integrate(folders, root='', target='', name=''):
+def integrate(folders, root='', target=''):
 
     if not root:
         root = os.path.dirname(folders[0])
