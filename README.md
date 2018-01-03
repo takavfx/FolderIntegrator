@@ -8,6 +8,9 @@ Tool to integrate multi folders.
 1. Drag & Drop folders to the window.
 2. Push "Run" button.
 
+- To open context menu, right click on the list.
+- To clear list, use "Clear" menu on context menu.
+
 # Usage
 
 With terminal command, adding folders as arguments creates single folder and integrate all files from folders into the single folder.
