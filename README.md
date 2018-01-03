@@ -9,7 +9,7 @@ With terminal command, adding folders as arguments creates single folder and int
 python core.py [folders]
 ```
 
-## Before:
+### Before:
 ```
 root_folder
     | - a
@@ -18,10 +18,10 @@ root_folder
     | - b
     |   |- b-a
     |   |- b-b
-    | - |- b-c
+    |   |- b-c
 ```
 
-## After:
+### After:
 ```
 root_folder
     |- single_folder
