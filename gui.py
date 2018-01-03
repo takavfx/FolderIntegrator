@@ -23,12 +23,13 @@ class MainWindow(QtWidgets.QMainWindow):
     UIPATH = os.path.join(CURRENT_DIR, 'ui', 'gui.ui')
 
 
-    def __init__(self, *args):
-        super(MainWindow, self).__init__(*args)
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
         
         self.UI = QtCompat.load_ui(self.UIPATH)
         self.setCentralWidget(self.UI)
 
+        self.setObjectName(self._windowName)
         self.setWindowTitle(self._windowTitle)
         self.setWindowIcon(QtGui.QIcon(os.path.join(CURRENT_DIR, 'static', 'folder.svg')))
 
@@ -113,7 +114,6 @@ def main():
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
-    # app.setQuitOnLastWindowClosed(False)
     mainWindow = MainWindow()
     mainWindow.show()
     sys.exit(app.exec_())
