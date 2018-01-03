@@ -1,5 +1,6 @@
 import os
 import sys
+import webbrowser
 from functools import partial
 
 from Qt import QtCore
@@ -46,6 +47,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.UI.filesListWidget.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
     def setSignals(self):
+        self.UI.openRepoAction.triggered.connect(self.openGitHubRepo)
         self.UI.runButton.clicked.connect(self.run)
         self.UI.filesListWidget.customContextMenuRequested.connect(self.showCellMenu)
 
@@ -103,6 +105,8 @@ class MainWindow(QtWidgets.QMainWindow):
             files.append(self.UI.filesListWidget.item(x).text())
         Core.integrate(files)
 
+    def openGitHubRepo(self):
+        webbrowser.open(r'https://github.com/takavfx/FolderIntegrator')
 
 
 def main():
