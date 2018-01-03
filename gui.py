@@ -4,6 +4,7 @@ from functools import partial
 
 from Qt import QtCore
 from Qt import QtWidgets
+from Qt import QtGui
 from Qt import QtCompat
 
 import core as Core
@@ -27,6 +28,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.UI = QtCompat.load_ui(self.UIPATH)
         self.setCentralWidget(self.UI)
 
+        self.setWindowTitle(self._windowTitle)
+        self.setWindowIcon(QtGui.QIcon(os.path.join(CURRENT_DIR, 'static', 'folder.svg')))
+
         self.setAcceptDrops(True)
 
         self.initGUI()
@@ -34,7 +38,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
     def initGUI(self):
-        self.setWindowTitle(self._windowTitle)
         self.resize(self._windowWidth, self._windowHeight)
 
         self.UI.statusbar.clearMessage()
@@ -79,6 +82,7 @@ class MainWindow(QtWidgets.QMainWindow):
         
         clearAction = QtWidgets.QAction("Clear", self)
         clearAction.triggered.connect(self.clearList)
+        clearAction.setIcon(QtGui.QIcon(os.path.join(CURRENT_DIR, 'static', 'clear.svg')))
 
         contextMenu.addAction(clearAction)
 
