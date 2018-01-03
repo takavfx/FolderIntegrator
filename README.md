@@ -1,6 +1,8 @@
 # FolderIntegrator
 Tool to integrate multi folders.
 
+![](doc/images/gui.png)
+
 # Usage
 
 With terminal command, adding folders as arguments creates single folder and integrate all files from folders into the single folder.
