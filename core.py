@@ -4,7 +4,6 @@ import shutil
 import uuid
 
 def integrate(folders, root='', target='', name=''):
-    print folders
 
     if not root:
         root = os.path.dirname(folders[0])
