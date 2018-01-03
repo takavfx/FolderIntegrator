@@ -3,7 +3,7 @@ import sys
 import shutil
 import uuid
 
-def counpound(folders, root='', target='', name=''):
+def integrate(folders, root='', target='', name=''):
     print folders
 
     if not root:
@@ -28,5 +28,5 @@ def counpound(folders, root='', target='', name=''):
 if __name__ == '__main__':
     folders = sys.argv
     folders.pop(0)
-    counpound(sys.argv)
+    integrate(sys.argv)
     
